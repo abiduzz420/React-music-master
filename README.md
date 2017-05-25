@@ -2,7 +2,7 @@
 
 The app was built while I was following Udemy course on ReactJS and Redux
 
-## Concepts Learnt
+## Concepts Learnt:
 
 * Learnt how to handle different states
 * Write Anonyomous arrow functions
@@ -47,3 +47,13 @@ The app was built while I was following Udemy course on ReactJS and Redux
 
 ### Screenshot of the app:
 ![alt](http://i.imgur.com/i6DBt5lh.jpg)
+
+
+### Further improvements:
+Challenges
+
+* Add more features from the Spotify API. For example, showing featured-playlists that feature the searched artist.
+
+* Use the browse feature from the Spotify API to give recommendations to the user to search a trending artist.
+
+* Store the user’s searches in cookies to have the last search show upon revisiting the application (Hint: the next application uses cookies, so perhaps you can come back to this one).
