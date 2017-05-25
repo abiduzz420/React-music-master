@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-class Profile extends React.Component {
+class Profile extends Component {
+
   render() {
-    // console.log('this.props',this.props);
+    let artist = {name:'',followers:{total:''},images:[{url:''}],genres:[]};
+    artist = this.props.artist !== null ? this.props.artist : artist;
     return(
-      <div>
-        <div>Profile Image</div>
-        <div>Profile Name</div>
+      <div className="Profile">
+        <img
+          className="Profile-img"
+          alt="profile-img"
+          src={artist.images[0].url}/>
+        <div className="Profile-info">
+          <div className="Profile-name">{artist.name}</div>
+          <div className="Profile-followers">{artist.followers.total}</div>
+          <div className="Profile-genres">
+            {
+              artist.genres.map((genre,key) => {
+                genre = (genre === artist.genres[artist.genres.length -1]) ? ` &${genre}` : ` ${genre},`
+                return(
+                  <span key={key}>{genre}</span>
+                )
+              })
+            }
+          </div>
+        </div>
       </div>
     )
   }

@@ -15,12 +15,15 @@ class App extends Component {
   submit(){
     const BASE_URL = 'https://api.spotify.com/v1/search?'
     const FETCH_URL = `${BASE_URL}q=${this.state.query}&type=artist&limit=1`;
+    console.log('FETCH_URL',FETCH_URL);
     fetch(FETCH_URL,{
       method:'GET'
     })
     .then(response => response.json())
     .then(json => {
+      console.log('json',json);
       const artist = json.artists.items[0]
+      console.log('artist',artist);
       this.setState({artist})
     });
 
@@ -47,10 +50,12 @@ class App extends Component {
             </InputGroup.Addon>
           </InputGroup>
         </FormGroup>
+
         <Profile artist={this.state.artist}/>
+
         <div className="Gallery">Gallery</div>
       </div>
-                );
+          );
               }
 
   }
