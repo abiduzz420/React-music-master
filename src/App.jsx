@@ -35,15 +35,25 @@ class App extends Component {
       .then(response => response.json())
       .then(json => {
         console.log('Artist Top tracks',json);
+        // The below statement uses ES6 functionality to initialize multiple variables
+        // having same name as in json, so that you need not write multiple initializations
+        /*
+        For example:
+        const index = json.index;
+        const preview_url = json.preview_url;
+        const name = json.name;
+
+        Instead we can utilize ES6 feature as below
+        const { index, preview_url, name } = json;
+
+        Note that they must have same variable names as json objects
+
+        */
         const { tracks } = json;
         this.setState({tracks})
-
-
       })
-
-    });
-
-  }
+  });
+}
 
   render() {
     return (
