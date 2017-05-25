@@ -30,6 +30,9 @@ body{
 .Profile-info{
   padding-left: 10px;
   text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 .Profile-name{
@@ -38,4 +41,37 @@ body{
 
 .Profile-followers, .Profile-genres{
   font-size: 18px;
+}
+
+/*Gallery*/
+
+.Track{
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  text-align: left;
+  margin:10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.Track-image{
+  width: inherit;
+  height: inherit;
+  border: 3px solid #fff;
+  border-radius: 2px;
+  position:absolute;
+  object-fit: cover;
+}
+
+.Track-text{
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  margin-left: 3px;
+  width: 214px;
+  opacity: 0.75;
+  bottom: 0;
+  padding: 10px;
 }

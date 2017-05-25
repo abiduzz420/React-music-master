@@ -19,7 +19,7 @@ class Profile extends Component {
             {
               artist.genres.map((genre,key) => {
                 if(artist.genres.length > 1){
-                  genre = (genre === artist.genres[artist.genres.length -1]) ? ` &${genre}` : ` ${genre},`;
+                  genre = (genre === artist.genres[artist.genres.length -1]) ? ` & ${genre}` : ` ${genre},`;
                 }
                 else {
                   genre = `${genre}`;
