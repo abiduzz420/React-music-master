@@ -14,11 +14,16 @@ class Profile extends Component {
           src={artist.images[0].url}/>
         <div className="Profile-info">
           <div className="Profile-name">{artist.name}</div>
-          <div className="Profile-followers">{artist.followers.total}</div>
+          <div className="Profile-followers">{artist.followers.total} followers</div>
           <div className="Profile-genres">
             {
               artist.genres.map((genre,key) => {
-                genre = (genre === artist.genres[artist.genres.length -1]) ? ` &${genre}` : ` ${genre},`
+                if(artist.genres.length > 1){
+                  genre = (genre === artist.genres[artist.genres.length -1]) ? ` &${genre}` : ` ${genre},`;
+                }
+                else {
+                  genre = `${genre}`;
+                                }
                 return(
                   <span key={key}>{genre}</span>
                 )
