@@ -1,6 +1,6 @@
 # Music master
 
-The app was built while I was following Udemy course on ReactJS and Redux
+The app was built while I was learning ReactJS and Redux
 
 ## Concepts Learnt:
 
